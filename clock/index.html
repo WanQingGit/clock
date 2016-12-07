@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../jquery-2.2.4.min.js"></script>
+    <script src="../bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap-3.3.0/dist/css/bootstrap.min.css">
+</head>
+<body style="height:100%">
+<canvas id="canvas" style="height:100%">
+    当前浏览器不支持canvas，请更换浏览器后再试
+</canvas>
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+   更改指定日期
+</button>
+
+<!-- Modal -->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">日期设置</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container" id="index_date">
+                    <div class="row">
+                        <lable class="col-xs-1">
+                           日期：
+                        </lable>
+                        <div class="col-xs-1">
+                            <input type="text" class="form-control" placeholder="年">
+                        </div>
+                        <div class="col-xs-1">
+                            <input type="text" class="form-control" placeholder="月">
+                        </div>
+                        <div class="col-xs-1">
+                            <input type="text" class="form-control" placeholder="日">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" onclick="changeTime();">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="digit.js"></script>
+<!--<script src="my.js"></script>-->
+<script src="countdown.js"></script>
+</body>
+</html>
